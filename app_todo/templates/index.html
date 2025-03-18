@@ -30,10 +30,11 @@
                         <span class="ui green label">(complete)</span>
                     {% endif %}
                 </tr>
-                <a class="uibutton" href="/done/{{ task.id }}"><button class="button1">Mark Done</button></a>
-                <a class="uibutton" href="/delete/{{ task.id }}"><button class="button1">Delete</button></a>
+                <a class="uibutton" href="/done/{{ task.id }}">Mark Done</a>
+                <a class="uibutton" href="/delete/{{ task.id }}">Delete</a>
                 <p></p>
             {% endfor %}
         </form>
+        <a href="/clean">Clean the list!</a>
     </body>
 </html>

@@ -32,9 +32,14 @@ body {
 }
 .thisistr{
     background-color: rgb(9, 9, 9);
-    color: blueviolet;
+    color:bisque;
     padding: 50px;
     border-radius: 45px;
 }
-
+.titleofthetask {
+    background-color: bisque;
+}
+td {
+    color: beige;
+}
 

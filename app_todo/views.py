@@ -27,3 +27,7 @@ def delete(request, task_id):
     task=Task_class.objects.get(id=task_id)
     task.delete()
     return redirect("index")
+
+def clean (request):
+    Task_class.objects.all().delete()
+    return redirect("index")
