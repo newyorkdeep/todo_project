@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>to do</title>
+        <link rel="stylesheet" href="{% static 'styles1.css' %}">
+    </head>
+    <body>
+        <form class="ui form" action="/add" method="post">
+            {% csrf_token %}
+            <div class="field">
+                <input type="text" name="task_text" placeholder=" Enter New ToDo Task..." class="inputting">
+                <br>
+            </div>
+            <button class="button1" type="submit">Enter</button>
+        </form>
+        <p></p>
+        <p></p>
+        <p></p>
+        <form class="thisistr">
+            {% for task in tasks_list %}
+                <tr class="thisistr">
+                    <td>{{task.task_text}}</td>
+                    <p></p>
+                    {% if task.is_it_done == False %}
+                        <span class="ui gray label">(not complete)</span>
+                    {% else %}
+                        <span class="ui green label">(complete)</span>
+                    {% endif %}
+                </tr>
+                <a class="uibutton" href="/done/{{ task.id }}"><button class="button1">Mark Done</button></a>
+                <a class="uibutton" href="/delete/{{ task.id }}"><button class="button1">Delete</button></a>
+                <p></p>
+            {% endfor %}
+        </form>
+    </body>
+</html>
