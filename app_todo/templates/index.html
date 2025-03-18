@@ -14,15 +14,13 @@
                 <input type="text" name="task_text" placeholder=" Enter New ToDo Task..." class="inputting">
                 <br>
             </div>
-            <button class="button1" type="submit">Enter</button>
+            <!--<button class="button1" type="submit">Enter</button>-->
         </form>
-        <p></p>
-        <p></p>
         <p></p>
         <form class="thisistr">
             {% for task in tasks_list %}
                 <tr class="thisistr">
-                    <td>{{task.task_text}}</td>
+                    <td class="headerr">{{task.task_text}}</td>
                     <p></p>
                     {% if task.is_it_done == False %}
                         <span class="ui gray label">(not complete)</span>
@@ -30,7 +28,11 @@
                         <span class="ui green label">(complete)</span>
                     {% endif %}
                 </tr>
-                <a class="uibutton" href="/done/{{ task.id }}">Mark Done</a>
+                {% if task.is_it_done == False %}
+                    <a class="uibutton" href="/done/{{ task.id }}">Mark Done</a>
+                {% else %}
+                <a class="uibutton" href="/done/{{ task.id }}">Mark Undone</a>
+                {% endif %}
                 <a class="uibutton" href="/delete/{{ task.id }}">Delete</a>
                 <p></p>
             {% endfor %}
