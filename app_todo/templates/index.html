@@ -4,22 +4,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>to do</title>
+        <title>Todo list</title>
         <link rel="stylesheet" href="{% static 'styles1.css' %}">
     </head>
     <body>
-        <form class="ui form" action="/add" method="post">
-            {% csrf_token %}
-            <div class="field">
-                <input type="text" name="task_text" placeholder=" Enter New ToDo Task..." class="inputting">
-                <br>
-            </div>
-            <!--<button class="button1" type="submit">Enter</button>-->
-        </form>
         <p></p>
-        <form class="thisistr">
+        <form class="thecontentscreen">
             {% for task in tasks_list %}
-                <tr class="thisistr">
+                <tr>
                     <td class="headerr">{{task.task_text}}</td>
                     <p></p>
                     {% if task.is_it_done == False %}
@@ -37,6 +29,16 @@
                 <p></p>
             {% endfor %}
         </form>
-        <a href="/clean">Clean the list!</a>
+        
+        <p></p><p></p>
+        <form class="formforinput" action="/add" method="post">
+            {% csrf_token %}
+            <div class="field">
+                <input class="inputfield" type="text" name="task_text" placeholder=" Enter New ToDo Task...">
+                <br>
+            </div>
+            <button class="sendinput" type="submit">Enter</button>
+        </form>
+        <a class="nuke" href="/clean">(delete all)</a>
     </body>
 </html>
