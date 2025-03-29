@@ -11,6 +11,7 @@
         <p></p>
         <form class="thecontentscreen">
             {% for task in tasks_list %}
+                <div class="thetaskitself">
                 <tr>
                     <td class="headerr">{{task.task_text}}</td>
                     <p></p>
@@ -23,10 +24,11 @@
                 {% if task.is_it_done == False %}
                     <a class="uibutton" href="/done/{{ task.id }}">Mark Done</a>
                 {% else %}
-                <a class="uibutton" href="/done/{{ task.id }}">Mark Undone</a>
+                    <a class="uibutton" href="/done/{{ task.id }}">Mark Undone</a>
                 {% endif %}
                 <a class="uibutton" href="/delete/{{ task.id }}">Delete</a>
                 <p></p>
+            </div>
             {% endfor %}
         </form>
         
@@ -39,6 +41,9 @@
             </div>
             <button class="sendinput" type="submit">Enter</button>
         </form>
-        <a class="nuke" href="/clean">(delete all)</a>
+        <div class="bottomlinks">
+            <a class="nuke" href="/clean">Delete all tasks</a>
+            <a href="/about" class="nuke">About the project</a>
+        </div>
     </body>
 </html>

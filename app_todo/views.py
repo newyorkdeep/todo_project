@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Task_class
 from django.views.decorators.http import require_http_methods
+from django.template import loader
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -31,3 +33,7 @@ def delete(request, task_id):
 def clean (request):
     Task_class.objects.all().delete()
     return redirect("index")
+
+def about (request):
+    template=loader.get_template('about.html')
+    return HttpResponse(template.render())

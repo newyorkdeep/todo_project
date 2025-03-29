@@ -4,9 +4,8 @@ body {
 }
 .nuke {
     color: rgb(193, 193, 193);
-    display: flex;
     justify-content: center;
-    margin-top: 1vh;
+    margin-inline: 5vh;
 }
 .formforinput {
     display: flex;
@@ -14,6 +13,7 @@ body {
     flex-wrap: wrap;
     min-width: fit-content;
     justify-content: center;
+    margin-bottom: 1vh;
 }
 .inputfield {
     border-radius: 20px;
@@ -31,14 +31,31 @@ body {
 }
 .thecontentscreen {
     background-color: rgb(50, 49, 53);
-    border-radius: 5px;
+    border-radius: 15px;
     display:flexbox;
     height:85vh;
     overflow: auto;
     color: white;
     font-size:large;
     justify-items: center;
+    justify-self: center;
+    justify-content: center;
+    width: 99.9999999%;
 }
 a {
     color: white;
 }
+.thetaskitself {
+    background-color: rgb(30, 30, 30);
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 10px;
+}
+.thetaskitself:hover {
+    background-color: rgb(56, 56, 56);
+}
+.bottomlinks {
+    justify-self: center;
+    display: flexbox;
+    flex-direction: row;
+}   
