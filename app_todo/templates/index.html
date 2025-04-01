@@ -12,26 +12,26 @@
         <form class="thecontentscreen">
             {% for task in tasks_list %}
                 <div class="thetaskitself">
-                <tr>
-                    <td class="headerr">{{task.task_text}}</td>
-                    <p></p>
+                    <tr>
+                        <td><a class="thetasktext">{{task.task_text}}</a></td>
+                        <p></p>
+                        {% if task.is_it_done == False %}
+                            <span class="ui gray label">not complete❌</span>
+                        {% else %}
+                            <span class="ui green label">complete✅</span>
+                        {% endif %}
+                        <p></p>
+                    </tr>
                     {% if task.is_it_done == False %}
-                        <span class="ui gray label">(not complete)</span>
+                        <a class="buttonmarkdone" href="/done/{{ task.id }}">Mark Done</a>
                     {% else %}
-                        <span class="ui green label">(complete)</span>
+                        <a class="buttonmarkdone" href="/done/{{ task.id }}">Mark Undone</a>
                     {% endif %}
-                </tr>
-                {% if task.is_it_done == False %}
-                    <a class="uibutton" href="/done/{{ task.id }}">Mark Done</a>
-                {% else %}
-                    <a class="uibutton" href="/done/{{ task.id }}">Mark Undone</a>
-                {% endif %}
-                <a class="uibutton" href="/delete/{{ task.id }}">Delete</a>
-                <p></p>
-            </div>
+                    <a class="buttondelete" href="/delete/{{ task.id }}">Delete</a>
+                    <p></p>
+                </div>
             {% endfor %}
         </form>
-        
         <p></p><p></p>
         <form class="formforinput" action="/add" method="post">
             {% csrf_token %}
