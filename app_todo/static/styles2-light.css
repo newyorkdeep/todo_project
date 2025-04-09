@@ -5,17 +5,17 @@
     text-align: center;
     justify-self: center;
     margin-top: 30vh;
-    background-color: rgb(21, 21, 21);
+    background-color: rgb(108, 85, 97);
     border-radius: 30px;
     padding: 5vh;
     color: white;
 }
 body {
-    background-color: rgb(50, 49, 53);
+    background-color: rgb(255, 255, 255);
 }
 .thebutton {
     display: flex;
-    background-color: rgb(21,21,21);
+    background-color: rgb(108, 85, 97);
     padding: 1vh;
     justify-self: center;
     align-self: center;

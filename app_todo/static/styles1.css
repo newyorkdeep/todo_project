@@ -7,6 +7,8 @@ body {
     color: rgb(193, 193, 193);
     justify-content: center;
     margin-inline: 5vh;
+    font-size: x-small;
+    text-decoration: none;
 }
 .formforinput {
     display: flex;
@@ -19,7 +21,7 @@ body {
 .inputfield {
     border-radius: 15px;
     padding: 10px;
-    padding-inline: 150px;
+    padding-inline: 50px;
     font-size: 40;
     background-color: rgb(50, 49, 53);
     color: white;
@@ -56,9 +58,12 @@ a {
     background-color: rgb(56, 56, 56);
 }
 .bottomlinks {
-    justify-self: center;
+    justify-self:left;
     display: flexbox;
     flex-direction: row;
+    background-color: rgb(35, 35, 35);
+    border-radius: 10px;
+    margin-bottom: 1vh;
 } 
 .buttonmarkdone {
     color: rgb(43, 226, 198);

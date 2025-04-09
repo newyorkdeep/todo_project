@@ -42,8 +42,9 @@ def clean (request):
     return redirect("index")
 
 def about (request):
-    template=loader.get_template('about.html')
-    return HttpResponse(template.render())
+    query = Themepicker.objects.filter(tag="tag")[0]
+    variable = query.is_it_black
+    return render(request, 'about.html', {'variable': variable})
 
 def switch(request): 
     query = Themepicker.objects.filter(tag="tag")[0]

@@ -5,7 +5,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About</title>
-        <link rel="stylesheet" href="{% static 'styles2.css' %}">
+        {% if variable == True %}
+            <link rel="stylesheet" href="{% static 'styles2.css' %}">
+        {% endif %}
+        {% if variable == False %}
+            <link rel="stylesheet" href="{% static 'styles2-light.css' %}">
+        {% endif %}
     </head>
     <body>
         <div class="texting">

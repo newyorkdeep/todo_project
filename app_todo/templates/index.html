@@ -15,6 +15,11 @@
     </head>
     <body>
         <p></p>
+        <div class="bottomlinks">
+            <a class="nuke" href="/clean">Delete all tasks</a>
+            <a href="/about" class="nuke">About the project</a>
+            <a href="/switch" class="nuke">Switch theme</a>
+        </div>
         <form class="thecontentscreen">
             {% for task in tasks_list %}
                 <div class="thetaskitself">
@@ -47,10 +52,5 @@
             </div>
             <button class="sendinput" type="submit">Enter</button>
         </form>
-        <div class="bottomlinks">
-            <a class="nuke" href="/clean">Delete all tasks</a>
-            <a href="/about" class="nuke">About the project</a>
-            <a href="/switch" class="nuke">Switch theme</a>
-        </div>
     </body>
 </html>
