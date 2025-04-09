@@ -1,0 +1,75 @@
+body {
+    flex-direction: column;
+    background-color: rgb(255, 255, 255); 
+    font-family:Arial, Helvetica, sans-serif
+}
+.nuke {
+    color: rgb(58, 58, 58);
+    justify-content: center;
+    margin-inline: 5vh;
+}
+.formforinput {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: fit-content;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+.inputfield {
+    border-radius: 15px;
+    padding: 10px;
+    padding-inline: 150px;
+    font-size: 40;
+    background-color: rgb(243, 243, 243);
+    color: rgb(0, 0, 0);
+}
+.sendinput {
+    border-radius: 20px;
+    margin-left: 10px;
+    background-color: rgb(243, 243, 243);
+    color: rgb(0, 0, 0);
+}
+.thecontentscreen {
+    background-color: rgb(243, 243, 243);
+    border-radius: 15px;
+    display:flexbox;
+    height:85vh;
+    overflow: auto;
+    color: white;
+    font-size:large;
+    justify-items: center;
+    justify-self: center;
+    justify-content: center;
+    width: 99.9999999%;
+}
+a {
+    color: white;
+}
+.thetaskitself {
+    background-color: rgb(108, 85, 97);
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 10px;
+}
+.thetaskitself:hover {
+    background-color: rgb(132, 104, 119);
+}
+.bottomlinks {
+    justify-self: center;
+    display: flexbox;
+    flex-direction: row;
+} 
+.buttonmarkdone {
+    color: rgb(43, 226, 198);
+    font-size: 15px;
+    text-decoration: none;
+}  
+.buttondelete {
+    color: rgb(255, 72, 99);
+    font-size: 15px;
+    text-decoration: none;
+}
+.thetasktext {
+    font-size: 30px;
+}

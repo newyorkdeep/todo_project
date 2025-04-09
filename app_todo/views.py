@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Task_class
+from .models import Themepicker
 from django.views.decorators.http import require_http_methods
 from django.template import loader
 from django.http import HttpResponse
@@ -7,8 +8,14 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request): 
+    userpreference=Themepicker.objects.all()
+    if len(userpreference)==0:
+        a=Themepicker(is_it_black="False", tag="tag")
+        a.save()
     tasks=Task_class.objects.all()
-    return render(request, 'index.html', {"tasks_list": tasks})
+    query = Themepicker.objects.filter(tag="tag")[0]
+    variable = query.is_it_black
+    return render(request, 'index.html', {"tasks_list": tasks, 'variable': variable})
 
 @require_http_methods(["POST"])
 def add(request):
@@ -37,3 +44,9 @@ def clean (request):
 def about (request):
     template=loader.get_template('about.html')
     return HttpResponse(template.render())
+
+def switch(request): 
+    query = Themepicker.objects.filter(tag="tag")[0]
+    query.is_it_black=not query.is_it_black
+    query.save()
+    return redirect("index")
