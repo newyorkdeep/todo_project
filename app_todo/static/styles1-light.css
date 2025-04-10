@@ -58,10 +58,10 @@ a {
     background-color: rgb(132, 104, 119);
 }
 .bottomlinks {
-    justify-self:left;
+    justify-self:center;
     display: flexbox;
     flex-direction: row;
-    background-color: rgb(227, 227, 227);
+    background-color: rgb(243, 243, 243);
     border-radius: 10px;
     margin-bottom: 1vh;
 } 
