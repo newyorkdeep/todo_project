@@ -5,22 +5,22 @@
     text-align: center;
     justify-self: center;
     margin-top: 30vh;
-    background-color: rgb(108, 85, 97);
+    background-color: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 5vh;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 body {
     background-color: rgb(243, 243, 243);
 }
 .thebutton {
     display: flex;
-    background-color: rgb(108, 85, 97);
+    background-color: rgb(255, 255, 255);
     padding: 1vh;
     justify-self: center;
     align-self: center;
     margin-top: 1vh;
     border-radius: 15px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }

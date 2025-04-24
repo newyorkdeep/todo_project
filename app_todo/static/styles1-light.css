@@ -49,13 +49,14 @@ a {
     color: white;
 }
 .thetaskitself {
-    background-color: rgb(108, 85, 97);
+    background-color: rgb(255, 255, 255);
     padding: 2vh;
     margin: 2vh;
     border-radius: 10px;
+    color: black;
 }
 .thetaskitself:hover {
-    background-color: rgb(132, 104, 119);
+    background-color: rgb(251, 250, 250);
 }
 .bottomlinks {
     justify-self:center;
@@ -77,4 +78,5 @@ a {
 }
 .thetasktext {
     font-size: 30px;
+    color: black;
 }
